@@ -22,6 +22,7 @@
             <td>{{$urai->alumni}}</td>
             <td>{{$urai->harga}}</td>
             <td>
+            <a href="{{route('EditDokter', $urai->id)}}" class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i>Edit</a>
             <a onclick= "return confirm('anda yakin')" href="{{route('HapusDokter',$urai->id)}}" class="btn btn-danger btn-sm">hapus</a>
             </td>
     </tr>

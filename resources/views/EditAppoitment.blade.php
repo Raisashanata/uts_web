@@ -4,10 +4,10 @@
 <div class="container mt-5">
     <div class="card shadow-sm">
         <div class="card-header bg-primary text-white">
-            <h3 class="card-title mb-0">Buat Janji Temu</h3>
+            <h3 class="card-title mb-0">Edit Dokter Baru</h3>
         </div>
         <div class="card-body">
-            <form method="POST" action="{{ route('SimpanAppoitment') }}">
+            <form method="POST" action="{{ route('UpdateAppoitment', $editA->id) }}">
                 @csrf
                 <div class="mb-3">
                     <label for="nama_pasien" class="form-label">Nama Pasien</label>
@@ -65,7 +65,7 @@
 </div>
 
 <script>
-    var obatPrice = 50000; 
+    var obatPrice = 50000; // Assuming a fixed price for the medication
 
     function updateSpesialisDanHarga() {
         var select = document.getElementById('nama_dokter');

@@ -24,15 +24,21 @@ Route::get('home',[pasienController::class, 'home'])->name('home');
 Route::get('formPasien',[pasienController::class, 'formPasien'])->name('formPasien');
 Route::get('DataPasien',[pasienController::class, 'DataPasien'])->name('DataPasien');
 Route::get('HapusPasien/{id}',[pasienController::class, 'HapusPasien'])->name('HapusPasien');
+Route::get('EditPasien/{id}',[pasienController::class, 'EditPasien'])->name('EditPasien');
+Route::post('UpdatePasien/{id}',[pasienController::class, 'UpdatePasien'])->name('UpdatePasien');
 Route::post('SimpanPasien',[pasienController::class,'SimpanPasien'])->name('SimpanPasien');
 
 Route::get('formDokter',[dokterController::class,'formDokter'])->name('formDokter');
 Route::get('DataDokter',[dokterController::class, 'DataDokter'])->name('DataDokter');
 Route::get('HapusDokter/{id}',[dokterController::class, 'HapusDokter'])->name('HapusDokter');
+Route::get('EditDokter/{id}',[dokterController::class, 'EditDokter'])->name('EditDokter');
+Route::post('UpdateDokter/{id}',[dokterController::class, 'UpdateDokter'])->name('UpdateDokter');
 Route::post('SimpanDokter',[dokterController::class,'SimpanDokter'])->name('SimpanDokter');
 
 Route::get('namaPasien',[appoitmentController::class, 'namaPasien'])->name('namaPasien');
 Route::get('formAppoitment',[appoitmentController::class, 'formAppoitment'])->name('formAppoitment');
 Route::get('DataAppoitment',[appoitmentController::class, 'DataAppoitment'])->name('DataAppoitment');
 Route::get('HapusAppoitment/{id}',[appoitmentController::class, 'HapusAppoitment'])->name('HapusAppoitment');
+Route::get('EditAppoitment/{id}',[appoitmentController::class, 'EditAppoitment'])->name('EditAppoitment');
+Route::post('UpdateAppoitment/{id}',[appoitmentController::class, 'UpdateAppoitment'])->name('UpdateAppoitment');
 Route::post('SimpanAppoitment',[appoitmentController::class,'SimpanAppoitment'])->name('SimpanAppoitment');

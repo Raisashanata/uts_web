@@ -30,6 +30,8 @@ class pasienController extends Controller
         $data->alamat = $request->alamat;
         $data->telepon = $request->telepon;
         $data->save();
+        return redirect()->route('DataPasien');
+
     }
 
     public function DataPasien(){
@@ -42,6 +44,22 @@ class pasienController extends Controller
         $data = pasienModel::find($id);
         $data->delete();
         return redirect()->route('DataPasien');
+    }
+
+    public function EditPasien($id){
+        $editP = pasienModel::findOrFail($id);
+        return view("EditPasien", compact('editP'));
+    }
+
+    public function UpdatePasien(request $request, $id){
+        $editP = pasienModel::findOrFail($id);
+        $editP->nama_pasien = $request->nama_pasien;
+        $editP->ttl = $request->ttl;
+        $editP->jk = $request->jk;
+        $editP->alamat = $request->alamat;
+        $editP->telepon = $request->telepon;
+        $editP->save();
+        return redirect()->route('DataPasien')->with('success', 'Pengguna berhasil diperbarui');
     }
 
 }

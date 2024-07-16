@@ -20,6 +20,7 @@ class dokterController extends Controller
         $data->alumni = $request->alumni;
         $data->harga = $request->harga;
         $data->save();
+        return redirect()->route('DataDokter')->with('success', 'Data Dokter Berhasil Disimpan');
     }
 
     public function DataDokter(){
@@ -32,5 +33,22 @@ class dokterController extends Controller
         $data = dokterModel::find($id);
         $data->delete();
         return redirect()->route('DataDokter');
+    }
+    
+
+    public function EditDokter($id){
+        $editD = dokterModel::findOrFail($id);
+        return view("EditDokter", compact('editD'));
+    }
+
+    public function UpdateDokter(request $request, $id){
+        $editD = dokterModel::findOrFail($id);
+        $editD->nama_dokter = $request->nama_dokter;
+        $editD->jk = $request->jk;
+        $editD->spesialis = $request->spesialis;
+        $editD->alumni = $request->alumni;
+        $editD->harga = $request->harga;
+        $editD->save();
+        return redirect()->route('DataDokter')->with('success', 'Pengguna berhasil diperbarui');
     }
 }

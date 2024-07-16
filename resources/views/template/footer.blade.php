@@ -1,14 +1,14 @@
 <footer>
     <td>
-<div class="card text-center">
+<div class="card text-left">
   <div class="card-header" style="background-color: #e3f2fd;">
   </div>
   <div class="card-body" style="background-color: #488ac7;">
-    <h5 class="card-title">TERIMA KASIH</h5>
-    <p class="card-text">WEBSITE INI ADALAH TUGAS ULANGAN TENGAH SEMESTER MATA KULIAH PEMOGRMANAN WEB</p>
+    <h5 class="card-title">RUMAH SAKIT UMUM MITRA</h5>
+    <p class="card-text">Jl. Jendral Basuki Rahmat No. 77 Paal V<br>Kecamatan Kota Baru<br>Kota Jambi</p>
   </div>
   <div class="card-footer text-muted" style="background-color: #e3f2fd;">
-    KELOMPOK 2
+  ©KELOMPOK 2
   </div>
 </div>
 </footer>

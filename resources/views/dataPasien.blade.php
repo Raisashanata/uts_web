@@ -28,6 +28,7 @@
                             <td>{{$urai->alamat}}</td>
                             <td>{{$urai->telepon}}</td>
                             <td class="text-center">
+                            <a href="{{route('EditPasien', $urai->id)}}" class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i>Edit</a>
                                 <a onclick="return confirm('Apakah Anda yakin ingin menghapus?')" href="{{route('HapusPasien', $urai->id)}}" class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i> Hapus</a>
                             </td>
                         </tr>

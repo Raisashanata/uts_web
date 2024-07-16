@@ -13,7 +13,8 @@
             <td>HARGA</td>
             <td>OBAT</td>
             <td>TOTAL</td>
-        </tr>
+            <td>URAI</td>
+</tr>
     </thead>
 
     <tbody>
@@ -29,7 +30,8 @@
             <td>{{$urai->obat}}</td>
             <td>{{$urai->total}}</td>
             <td>
-            <a onclick= "return confirm('anda yakin')" href="{{route('HapusDokter',$urai->id)}}" class="btn btn-danger btn-sm">hapus</a>
+            <a href="{{route('EditAppoitment', $urai->id)}}" class="btn btn-info btn-sm"><i class="fas fa-trash-alt"></i>Edit</a>
+            <a onclick= "return confirm('anda yakin')" href="{{route('HapusAppoitment',$urai->id)}}" class="btn btn-danger btn-sm">hapus</a>
             </td>
     </tr>
     @endforeach
